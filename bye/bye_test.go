@@ -1,4 +1,4 @@
-package hello
+package bye
 
 import (
 	"context"
@@ -6,11 +6,11 @@ import (
 )
 
 func TestBye(t *testing.T) {
-	resp, err := Hello(context.Background(), "Jane Doe")
+	resp, err := Bye(context.Background(), "Jane Doe")
 	if err != nil {
 		t.Fatal(err)
 	}
-	want := "Hello, Jane Doe!"
+	want := "Bye, Jane Doe!"
 	if got := resp.Message; got != want {
 		t.Errorf("got %q, want %q", got, want)
 	}
